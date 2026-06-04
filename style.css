@@ -1,0 +1,261 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+/* =========================
+   CABECERA
+========================= */
+
+.hero {
+  background:
+    linear-gradient(135deg, rgba(255, 140, 0, 0.22), rgba(255, 215, 0, 0.12)),
+    #080808;
+  border-bottom: 4px solid #ff9d00;
+  padding: 32px 18px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 8px 14px;
+  border: 2px solid #ffd000;
+  border-radius: 999px;
+  color: #ffd000;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+h1 {
+  margin: 0;
+  color: #ff9d00;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  max-width: 760px;
+  margin: 18px auto 0;
+  color: #f5f5f5;
+  font-size: 1.2rem;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container {
+  width: min(100% - 24px, 1100px);
+  margin: 28px auto;
+}
+
+/* =========================
+   AVISO
+========================= */
+
+.notice {
+  background: #151000;
+  border: 3px solid #ffd000;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 28px;
+  box-shadow: 0 0 22px rgba(255, 208, 0, 0.18);
+}
+
+.notice h2 {
+  margin-top: 0;
+  color: #ffd000;
+  font-size: 1.7rem;
+}
+
+.notice p {
+  font-size: 1.1rem;
+}
+
+.highlight {
+  margin: 18px 0;
+  padding: 18px;
+  background: #000000;
+  color: #ff9d00;
+  border: 3px solid #ff9d00;
+  border-radius: 14px;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.card {
+  background: #101010;
+  border: 3px solid #ff9d00;
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 28px;
+  box-shadow: 0 0 24px rgba(255, 157, 0, 0.18);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  color: #ffd000;
+  font-size: 2rem;
+  border-bottom: 2px solid #ff9d00;
+  padding-bottom: 12px;
+}
+
+/* =========================
+   LISTA DE COMANDOS
+========================= */
+
+.command-list {
+  display: grid;
+  gap: 14px;
+}
+
+.command-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: #000000;
+  border: 2px solid #333333;
+  border-left: 8px solid #ff9d00;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.command {
+  display: inline-block;
+  color: #000000;
+  background: #ffd000;
+  border: 2px solid #ff9d00;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 900;
+  font-size: 1.15rem;
+  text-align: center;
+  word-break: break-word;
+}
+
+.description {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+.footer {
+  text-align: center;
+  padding: 28px 16px;
+  color: #ffd000;
+  border-top: 2px solid #ff9d00;
+  background: #080808;
+  font-weight: 700;
+}
+
+/* =========================
+   ADAPTACIÓN A MÓVIL
+========================= */
+
+@media (max-width: 700px) {
+  html {
+    font-size: 17px;
+  }
+
+  .hero {
+    padding: 28px 14px;
+  }
+
+  .container {
+    width: min(100% - 18px, 1100px);
+    margin: 18px auto;
+  }
+
+  .notice,
+  .card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .card h2 {
+    font-size: 1.65rem;
+  }
+
+  .command-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .command {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 12px;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .highlight {
+    font-size: 1.65rem;
+  }
+}
+
+/* =========================
+   EXTRA PARA PANTALLAS MUY PEQUEÑAS
+========================= */
+
+@media (max-width: 380px) {
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .command {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
